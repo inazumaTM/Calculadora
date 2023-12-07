@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+</head>
+<body>
+    <div>
+        <input type="number" id="numero1" placeholder="Número 1">
+        <input type="number" id="numero2" placeholder="Número 2 (opcional)">
+        <button onclick="calcular('soma')" id="soma">+</button>
+        <button onclick="calcular('sub')" id="sub">-</button>
+        <button onclick="calcular('mult')" id="mult">x</button>
+        <button onclick="calcular('divi')" id="divi">÷</button>
+        <button onclick="calcular('porcent')" id="porcent">%</button>
+    </div>
+    <div id="result"><br/></div>
+</body>
+</html>

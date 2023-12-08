@@ -8,43 +8,48 @@ function calcular(operacao) {
         case 'soma':
             if(isNaN(numero1) || isNaN(numero2)){
                 alert('insira dois digitos para essa operação')
-                result.textContent = 'Impossivel com apenas 1 digito'
+                result.textContent = 'Impossivel realizar esta operaçao'
             }else{
                 resultado = numero1+numero2
                 result.textContent = `${numero1} + ${numero2} é igual a: ${resultado}`;
             } break
+
         case 'sub':
             if(isNaN(numero1) || isNaN(numero2)){
                 alert('insira dois digitos para essa operação')
-                result.textContent = 'Impossivel com apenas 1 digito'
+                result.textContent = 'Impossivel realizar esta operaçao'
             }else{
                 resultado = numero1-numero2
                 result.textContent = `${numero1} - ${numero2} é igual a: ${resultado}`;
             }break
+
         case 'mult':
             if(isNaN(numero1) || isNaN(numero2)){
                 alert('insira dois digitos para essa operação')
-                result.textContent = 'Impossivel com apenas 1 digito'
+                result.textContent = 'Impossivel realizar esta operaçao'
             }else{
                 resultado = numero1*numero2
                 result.textContent = `${numero1} x ${numero2} é igual a: ${resultado}`;
-            }
-            break
+            }break
+
         case 'divi':
             if(isNaN(numero1) || isNaN(numero2)){
                 alert('insira dois digitos para essa operação')
-                result.textContent = 'Impossivel com apenas 1 digito'
+                result.textContent = 'Impossivel realizar esta operaçao'
             }else{
                 resultado = numero1/numero2
                 result.textContent = `${numero1} ÷ ${numero2} é igual a: ${resultado}`;
             } break
+
         case 'porcent':
             if(isNaN(numero1) || isNaN(numero2)){
                 alert('insira dois digitos para essa operação')
-                result.textContent = 'Impossivel com apenas 1 digito'
+                result.textContent = 'Impossivel realizar esta operaçao'
             }else{
                 resultado = (numero1/100)*numero2
                 result.textContent = `${numero1}% de ${numero2} é igual a: ${resultado}`;
-            }
+            } break
+        case 'clear':
+            result.textContent = 'Limpo'
     } 
 }

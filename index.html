@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculadora</title>
 </head>
-<body>
+<body><div id="back"></div>
     <div>
         <input type="number" id="numero1" placeholder="Número 1">
-        <input type="number" id="numero2" placeholder="Número 2 (opcional)">
+        <input type="number" id="numero2" placeholder="Número 2">
         <button onclick="calcular('soma')" id="soma">+</button>
         <button onclick="calcular('sub')" id="sub">-</button>
         <button onclick="calcular('mult')" id="mult">x</button>
         <button onclick="calcular('divi')" id="divi">÷</button>
         <button onclick="calcular('porcent')" id="porcent">%</button>
+        <button onclick="calcular('clear')" id="clear">Ce</button>
     </div>
     <div id="result"><br/></div>
 </body>

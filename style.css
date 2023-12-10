@@ -38,9 +38,32 @@ html{
     left: 700px;
     top: 220px;
 }
-#clear{
+#pi{
     position: absolute;
     left: 480px;
+    top: 280px;
+}
+#pot{
+    position: absolute;
+    left: 535px;
+    top: 280px;
+    font-size: 30px;
+}
+#raiz{
+    position: absolute;
+    left: 590px;
+    top: 280px;
+    font-size: 30px;
+}
+#fat{
+    position: absolute;
+    left: 645px;
+    top: 280px;
+    font-size: 30px;
+}
+#clear{
+    position: absolute;
+    left: 700px;
     top: 280px;
     font-size: 30px;
 }
@@ -90,7 +113,7 @@ input{
 }
 #back{
     width: 340px;
-    height: 450px;
+    height: 480px;
     position: absolute;
     top: 50px;
     left: 450px;

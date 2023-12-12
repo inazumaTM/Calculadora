@@ -12,7 +12,7 @@ function calcular(operacao) {
                 result.textContent = 'Impossivel realizar esta operaçao'
             }else{
                 resultado = numero1+numero2
-                result.textContent = `${numero1} + ${numero2} é igual a: ${resultado}`;
+                result.textContent = `${stringReplace(numero1)} + ${stringReplace(numero2)} é igual a: ${stringReplace(resultado)}`;
             } break
 //======================================================================================
         case 'sub':
@@ -21,7 +21,7 @@ function calcular(operacao) {
                 result.textContent = 'Impossivel realizar esta operaçao'
             }else{
                 resultado = numero1-numero2
-                result.textContent = `${numero1} - ${numero2} é igual a: ${resultado}`;
+                result.textContent = `${stringReplace(numero1)} - ${stringReplace(numero2)} é igual a: ${stringReplace(resultado)}`;
             }break
 //======================================================================================
         case 'mult':
@@ -30,7 +30,7 @@ function calcular(operacao) {
                 result.textContent = 'Impossivel realizar esta operaçao'
             }else{
                 resultado = numero1*numero2
-                result.textContent = `${numero1} x ${numero2} é igual a: ${resultado}`;
+                result.textContent = `${stringReplace(numero1)} x ${stringReplace(numero2)} é igual a: ${stringReplace(resultado)}`;
             }break
 //======================================================================================
         case 'divi':
@@ -39,7 +39,7 @@ function calcular(operacao) {
                 result.textContent = 'Impossivel realizar esta operaçao'
             }else{
                 resultado = numero1/numero2
-                result.textContent = `${numero1} ÷ ${numero2} é igual a: ${resultado}`;
+                result.textContent = `${stringReplace(numero1)} ÷ ${stringReplace(numero2)} é igual a: ${stringReplace(resultado)}`;
             } break
 //======================================================================================
         case 'porcent':
@@ -48,7 +48,7 @@ function calcular(operacao) {
                 result.textContent = 'Impossivel realizar esta operaçao'
             }else{
                 resultado = (numero1/100)*numero2
-                result.textContent = `${numero1}% de ${numero2} é igual a: ${resultado}`;
+                result.textContent = `${stringReplace(numero1)}% de ${stringReplace(numero2)} é igual a: ${stringReplace(resultado)}`;
             } break
 //======================================================================================
         case 'clear':
@@ -63,7 +63,7 @@ function calcular(operacao) {
             result.textContent = 'Impossivel realizar esta operaçao'
         }else{
             resultado = numero1**numero2
-            result.textContent = `${numero1} elevado a ${numero2} é igual a ${resultado}`
+            result.textContent = `${stringReplace(numero1)} elevado a ${stringReplace(numero2)} é igual a ${stringReplace(resultado)}`
         }break
 //======================================================================================
         case 'raiz':
@@ -72,11 +72,11 @@ function calcular(operacao) {
             if(num1 != '' ^ num2 != '' ){
                 if(num1 != ''){
                     resultado = Math.sqrt(numero1)
-                    result.textContent = `A raiz quadrada de ${numero1} é igual a ${resultado}`
+                    result.textContent = `A raiz quadrada de ${stringReplace(numero1)} é igual a ${stringReplace(resultado)}`
                 }
                 else{
                     resultado = Math.sqrt(numero2)
-                    result.textContent = `A raiz quadrada de ${numero2} é igual a ${resultado}`
+                    result.textContent = `A raiz quadrada de ${stringReplace(numero2)} é igual a ${stringReplace(resultado)}`
                 }
             }else{
                 alert('insira um digito para esta operação')
@@ -97,12 +97,12 @@ function calcular(operacao) {
             num2 == 0 ? num2 = '' : num2
             if(num1 != '' ^ num2 != '' ){
                 if(num1 != ''){
-                    resultado = fatorial(numero1)
-                    result.textContent = `O fatorial de ${numero1} é igual a ${resultado}`
+                    resultado = fatorial(Math.round(numero1))
+                    result.textContent = `O fatorial de ${numero1.toFixed()} é igual a ${resultado}`
                 }
                 else{
-                    resultado = fatorial(numero2)
-                    result.textContent = `O fatorial de ${numero2} é igual a ${resultado}`
+                    resultado = fatorial(Math.round(numero2))
+                    result.textContent = `O fatorial de ${numero2.toFixed()} é igual a ${resultado}`
                 }
             }else{
                 alert('insira um digito para esta operação')
@@ -110,6 +110,9 @@ function calcular(operacao) {
             }break
 //======================================================================================
         case 'pi':
-            result.textContent = `O valor de 'Pi' é ${Math.PI}`
-    } 
+            result.textContent = `O valor de 'Pi' é ${stringReplace(Math.PI)}`
+    }
+    function stringReplace(param){
+        return param.toString().replace('.', ',')
+    }
 }
